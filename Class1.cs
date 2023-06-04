@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Data;
 
-namespace Server
+namespace AppswPacket
 {
     public enum RegisterResult
     //외국인전용을 신청하지는 않는지 확인
