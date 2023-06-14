@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Data;
+using System.Web;
 
 namespace AppswPacket
 {
@@ -87,7 +88,7 @@ namespace AppswPacket
 
         public Packet()
         {
-            this.Type = 0;
+            this.Type = -1;
         }
 
         public static byte[] Serialize(Object o)
@@ -136,7 +137,6 @@ namespace AppswPacket
     {
         public string stuID;
         public string ci;
-        public string var;
         public String ds;
     }
 
@@ -145,6 +145,10 @@ namespace AppswPacket
     {
         public string stuID;
         public string ci;
+        public string var;
+        public string department;
+        public string courseType;
+        public bool isOnlyRemaining;
         public String ds;
     }
 
