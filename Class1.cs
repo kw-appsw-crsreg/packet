@@ -93,7 +93,7 @@ namespace AppswPacket
 
         public static byte[] Serialize(Object o)
         {
-            MemoryStream ms = new MemoryStream(1024 * 4); // OS DATA CONTROL BASIC SIZE 4KB
+            MemoryStream ms = new MemoryStream(1024 * 4000); 
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(ms, o);
             return ms.ToArray();
@@ -101,7 +101,7 @@ namespace AppswPacket
 
         public static Object Desserialize(byte[] bt)
         {
-            MemoryStream ms = new MemoryStream(1024 * 4); // OS DATA CONTROL BASIC SIZE 4KB
+            MemoryStream ms = new MemoryStream(1024 * 4000);
             foreach (byte b in bt)
             {
                 ms.WriteByte(b);
